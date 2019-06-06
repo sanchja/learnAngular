@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="pageTitle">
+      <h4>Users are being dynamically added to this table via
+        <a href="https://jsonplaceholder.typicode.com" target="_blank" alt="https://jsonplaceholder.typicode.com">JsonPlaceholder</a>.</h4>
+        <p>This data is being handled by a "Service" class in order to inject the requested
+          data to the "User" link and the "User Details" link in the Navigation.
+        </p>
+    </div>
+
+    <table class="table shadow-lg p-3 mb-5 bg-white rounded">
+      <thead>
+        <tr class="bg-primary" style="color: #e3f2fd;">
+          <th>Id</th>
+          <th>Name</th>
+          <th>User Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td><a href="#">{{user.id}}</a></td>
+          <td>{{user.name}}</td>
+          <td>{{user.username}}</td>
+          <td>{{user.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

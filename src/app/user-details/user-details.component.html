@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="pageTitle">
+    <h4>Users are being dynamically added to this table via
+      <a href="https://jsonplaceholder.typicode.com" target="_blank" alt="https://jsonplaceholder.typicode.com">JsonPlaceholder</a>.</h4>
+      <p>As in the "users" link, this view is being dynamically driven from a shared "service" class.
+      </p>
+  </div>
+  <div id="contactCards" class="container-fluid">
+    <div class="card" style="width: 18rem;" *ngFor="let user of users">
+      <img src="http://res.publicdomainfiles.com/pdf_view/68/13927384215784.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{user.name}}</h5>
+        <p class="card-text"><strong>Address:</strong><br>
+          {{user.address.street}}, {{user.address.suite}}<br>
+          {{user.address.city}}, {{user.address.zipcode}}
+        </p>
+        <p class="card-text"><strong>Company:</strong><br>
+          {{user.company.name}}<br>
+          {{user.company.catchPhrase}}
+        </p>
+        <a routerLink="/userDetails" class="btn btn-primary btn-sm">Learn more</a>
+      </div>
+    </div>
+  </div>
+</div>
